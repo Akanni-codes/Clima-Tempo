@@ -1,24 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="./src/css/styles.css" />
-</head>
-<body>
-  <main class="container">
-    <h1>Clima</h1>
-    <form id="search-form">
-      <label for="city">Cidade</label>
-      <input id="city" name="city" type="text" placeholder="Ex: São Paulo" required />
-      <button type="submit">Buscar</button>
-    </form>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/svg" href="./src/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>Clima tempo</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Clima</h1>
+      <form id="search-form">
+        <label for="city">Cidade</label>
+        <input
+          id="city"
+          name="city"
+          type="text"
+          placeholder="Ex: São Paulo"
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
 
-    <section id="status" aria-live="polite"></section>
-    <section id="weather"></section>
-  </main>
+      <section id="status" aria-live="polite"></section>
+      <section id="weather"></section>
+    </main>
 
-  <script type="module" src="../src/js/app.js"></script>
-</body>
+    <script type="module" src="../src/js/app.js"></script>
+  </body>
 </html>
