@@ -4,7 +4,8 @@
   --card: #ffffff;
   --accent: #1e90ff;
   --text: #0b2545;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
 }
 body {
   margin: 0;
@@ -14,8 +15,105 @@ body {
   justify-content: center;
   padding: 2rem;
 }
-.container { max-width: 560px; width: 100%; }
-form { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-input { flex: 1; padding: 0.5rem; }
-button { padding: 0.5rem 0.75rem; background: var(--accent); color: white; border: none; cursor: pointer; }
-#weather { margin-top: 1rem; background: var(--card); padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.container {
+  max-width: 560px;
+  width: 100%;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+input {
+  flex: 1;
+  padding: 0.5rem;
+}
+button {
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#weather {
+  margin-top: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.place {
+  margin-bottom: 0.75rem;
+}
+.current {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.cw-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.icon {
+  font-size: 2rem;
+}
+.temp {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.cw-right {
+  font-size: 0.95rem;
+  color: #254861;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.hour-card {
+  background: rgba(30, 144, 255, 0.06);
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.hour-card .hour {
+  font-weight: 600;
+}
+.hour-card .small {
+  font-size: 0.85rem;
+  color: #234;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.day-card {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.day-card .day {
+  font-weight: 600;
+}
+.day-card .t {
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .hours-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+  .days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
