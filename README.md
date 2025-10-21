@@ -1,4 +1,4 @@
-# Weather App (exemplo)
+# Clima tempo (exercício de vibe coding)
 
 Projeto simples para consultar dados de clima usando Open‑Meteo.
 
